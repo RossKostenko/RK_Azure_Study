@@ -98,7 +98,7 @@ resource "azurerm_windows_function_app" "products_service" {
 
     # Enable function invocations from Azure Portal.
     cors {
-      allowed_origins = ["https://portal.azure.com"]
+      allowed_origins = ["https://portal.azure.com", "http://localhost:3000", "http://localhost:4173", "https://rkgsandfrontendne002.z16.web.core.windows.net"]
     }
 
     application_stack {
@@ -134,7 +134,7 @@ resource "azurerm_windows_function_app_slot" "products_service_dev" {
     always_on = false
 
     cors {
-      allowed_origins = ["https://portal.azure.com", "http://localhost:3000"]
+      allowed_origins = ["https://portal.azure.com", "http://localhost:3000", "http://localhost:4173", "https://rkgsandfrontendne002.z16.web.core.windows.net"]
     }
   }
 
